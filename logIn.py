@@ -1,7 +1,6 @@
 from selenium import webdriver
 import time
 import json
-import logging
 import ddddocr
 
 from downloadPicture import download_pic
@@ -48,6 +47,7 @@ def add_cookie(browser):
     browser.refresh()
     return browser
 
+
 def log_in_with_cookie():
     url, browser = browser_initial()
     browser.get(url)
@@ -79,6 +79,7 @@ def log_in(url, browser):
     # 登录
     browser.find_element_by_xpath('//*[@id="nav_block"]/form[2]/table/tbody/tr[10]/td/input[1]').click()
 
+
 def deal_picture(url_pic):
     ocr = ddddocr.DdddOcr(old=True)
     with open(url_pic, 'rb') as f:
@@ -93,8 +94,7 @@ def log_in_with_password():
     return browser
 
 
-
-
+X
 
 if __name__ == '__main__':
     browser = log_in_with_cookie()
