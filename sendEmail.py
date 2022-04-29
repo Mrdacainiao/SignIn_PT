@@ -38,4 +38,4 @@ def send_email(config_path, send_message):
 
 if __name__ == '__main__':
     config_path = "config.ini"
-    send_email(config_path)
+    send_email(config_path, "PT签到成功")

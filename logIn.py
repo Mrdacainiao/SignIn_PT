@@ -4,6 +4,7 @@ import json
 import ddddocr
 
 from downloadPicture import download_pic
+from sendEmail import send_email
 from signIn import sign_in
 
 username = 'zxftx'
@@ -94,10 +95,10 @@ def log_in_with_password():
     return browser
 
 
-X
-
 if __name__ == '__main__':
     browser = log_in_with_cookie()
     # browser = log_in_with_password()
     sign_in(browser)
     time.sleep(10)
+    config_path = "config.ini"
+    send_email(config_path, "PT签到成功")
